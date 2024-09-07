@@ -38,10 +38,6 @@ python main_ISIC.py  --reload True \
   --resume {model_save_path}
 ```
 
-| Method | Model | Top-1 Acc.(%) | model |
-| :---:| :---:|:---:|:---:|
-| ProConDual |ResNeXt-50 | 87.18    | [Download]() |
-
 
 | Method | Model | Top-1 Acc(%) | link | 
 | :---: | :---: | :---: | :---: | 
@@ -51,7 +47,7 @@ python main_ISIC.py  --reload True \
 
 ````
 ProConDual-main/dataset
-├── ImageNet+LT
+├── ImageNet_LT
 |   └── ImageNet_LT_test.txt
 |   └── ImageNet_LT_train.txt
 |   └── ImageNet_LT_val.txt
