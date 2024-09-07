@@ -39,13 +39,17 @@ python main_ISIC.py  --reload True \
 ```
 
 | Method | Model | Top-1 Acc.(%) | model |
-| :---:| :---:|:---:|:---:|:---:| :---:|  :---:| 
+| :---:| :---:|:---:|:---:|
 | ProConDual |ResNeXt-50 | 87.18    | [Download]() |
 
 
+| Method | Model | Top-1 Acc(%) | link | 
+| :---: | :---: | :---: | :---: | 
+|ProConDual | ResNet-50   | 87.18 | [Download]() | 
 
 ### Datasets txt file
 
+````
 ProConDual-main/dataset
 ├── ImageNet+LT
 |   └── ImageNet_LT_test.txt
@@ -55,3 +59,6 @@ ProConDual-main/dataset
     └── ISIC2019_test.csv
     └── ISIC2019_train.csv
     └── ISIC2019_val.csv
+````
+
+    
