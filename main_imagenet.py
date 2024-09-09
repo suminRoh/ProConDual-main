@@ -129,6 +129,9 @@ def main_worker(gpu, ngpus_per_node, args):
             args.start_epoch = checkpoint['epoch']
             model.load_state_dict(checkpoint['model'])
             optimizer.load_state_dict(checkpoint['optimizer'])
+            args.alpha=checkpoint['alpha']
+            args.beta=checkpoint['beta']
+            args.gamma=checkpoint['gamma']
             print("=> loaded checkpoint '{}' (epoch {})"
                   .format(args.resume, checkpoint['epoch']))
         else:
@@ -295,7 +298,7 @@ def train(train_loader, model, criterion_lc, criterion_cl,criterion_produal, opt
     model.train()
     end = time.time()
     
-    if epoch==args.start_epoch: 
+    if epoch==0: 
         args.alpha=1
         args.beta=1
         args.gamma=1
@@ -344,7 +347,7 @@ def train(train_loader, model, criterion_lc, criterion_cl,criterion_produal, opt
                 lc_loss=lc_loss_all, cl_loss=cl_loss_all,produal_loss=produal_loss_all, top1=top1, ))  # TODO
             print(output)
             
-    if epoch==args.start_epoch:
+    if epoch==0:
         args.alpha=round(args.weight_a/lc_loss_all.avg,2)
         args.beta=round(args.weight_b/cl_loss_all.avg,2)
         args.gamma=round(args.weight_c/produal_loss_all.avg,2)
