@@ -5,7 +5,14 @@ This is a Pytorch implementation of the [ProConDual paper]():
 <p align="center">
 <img src="./Arch.png" width="800">
 </p>
- 
+
+
+## Requirement
+- pytorch>=2.1.0
+- torchvision
+- tensorboardX
+
+
 ### ImageNet-LT 
 To do supervised training with ProConDual for 180 epochs on ImageNet-LT, run
 ```
@@ -39,6 +46,7 @@ python main_ISIC.py  --reload True \
 ```
 
 
+
 | Method | Model | Top-1 Acc(%) | link | 
 | :---: | :---: | :---: | :---: | 
 |ProConDual | ResNet-50   | 87.18 | [Download]() | 
@@ -47,7 +55,7 @@ python main_ISIC.py  --reload True \
 
 ````
 ProConDual-main/dataset
-├── ImageNet_LT
+├── ImageNet+LT
 |   └── ImageNet_LT_test.txt
 |   └── ImageNet_LT_train.txt
 |   └── ImageNet_LT_val.txt
