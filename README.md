@@ -27,7 +27,7 @@ python main_cifar.py --dataset cifar-10-lt --reload True \
 ```
 
 | Method | IF | Top-1 Acc(%) |
-| :---:| :---:|:---:|:---:|
+| :---:| :---:|:---:|
 | ProConDual   | 100   | 94.47%    |
 | ProConDual   | 50    | 94.49%    |
 | ProConDual   | 10    | 95.69%    |
@@ -48,7 +48,7 @@ python main_cifar.py --dataset cifar-100-lt --reload True \
 ```
 
 | Method | IF | Top-1 Acc(%) |
-| :---:| :---:|:---:|:---:|
+| :---:| :---:|:---:|
 | ProConDual   | 100   | 74.80%    |
 | ProConDual   | 50    | 74.90%    |
 | ProConDual   | 10    | 75.98%    |
