@@ -12,6 +12,48 @@ This is a Pytorch implementation of the [ProConDual paper]():
 - torchvision
 - tensorboardX
 
+### CIFAR-10-LT
+To do supervised training with ProConDual for 200 epochs on CIFAR-10-LT, run
+```
+python main_cifar.py --dataset cifar-10-lt
+```
+(All default parameter setups are included in main_cifar.py)
+
+
+To evaluate the performance on the test set, run
+```
+python main_cifar.py --dataset cifar-10-lt --reload True \
+  --resume {model_save_path}
+```
+
+| Method | IF | Top-1 Acc(%) |
+| :---:| :---:|:---:|:---:|
+| ProConDual   | 100   | 94.47%    |
+| ProConDual   | 50    | 94.49%    |
+| ProConDual   | 10    | 95.69%    |
+
+
+### CIFAR-100-LT
+To do supervised training with ProConDual for 200 epochs on CIFAR-100-LT, run
+```
+python main_cifar.py --dataset cifar-100-lt
+```
+(All default parameter setups are included in main_cifar.py)
+
+
+To evaluate the performance on the test set, run
+```
+python main_cifar.py --dataset cifar-100-lt --reload True \
+  --resume {model_save_path}
+```
+
+| Method | IF | Top-1 Acc(%) |
+| :---:| :---:|:---:|:---:|
+| ProConDual   | 100   | 74.80%    |
+| ProConDual   | 50    | 74.90%    |
+| ProConDual   | 10    | 75.98%    |
+
+
 
 ### ImageNet-LT 
 To do supervised training with ProConDual for 180 epochs on ImageNet-LT, run
@@ -29,7 +71,7 @@ python main_imagenet.py  --reload True \
 
 | Method | Model | Many | Med | Few | All | model |
 | :---:| :---:|:---:|:---:|:---:| :---:|  :---:| 
-| ProConDual |ResNeXt-50 | 67.6  | 54.0  | 40.0     | 57.3    | [Download]() |
+| ProConDual |ResNeXt-50 | 67.6  | 54.1  | 40.0     | 57.4    | [Download]() |
 
 
 ### ISIC2019 
